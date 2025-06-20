@@ -1,4 +1,4 @@
-frase = 'Curso em Video Python'
+# frase = 'Curso em Video Python'
 
 # print(frase[9:13]) = Começa na letra 9 e para na 13 (pega somente até a 12)
 # print(frase[9:21:2]) = Pula de duas em duas letras.
