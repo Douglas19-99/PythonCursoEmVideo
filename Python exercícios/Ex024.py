@@ -1,4 +1,4 @@
 nome = str(input('Qual o nome da sua cidade? '))
-primeiro_nome = nome.split()[0]
+primeiro_nome = nome.split()[0].upper()
 
-print('Santo' in primeiro_nome)
+print('SANTO' in primeiro_nome)

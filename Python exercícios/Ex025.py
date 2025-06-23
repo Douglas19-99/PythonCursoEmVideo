@@ -1,3 +1,3 @@
-nome = str(input('Qual seu nome completo? '))
+nome = str(input('Qual seu nome completo? ')).strip()
 
-print('Silva' in nome)
+print('Seu nome tem Silva? ','SILVA' in nome.upper())
