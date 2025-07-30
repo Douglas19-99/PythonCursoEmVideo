@@ -1,25 +1,24 @@
 '''
+Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.
+Pergunte o valor da casa, o salário do comprador e em quantos anos ele vai pagar.
+A prestação mensal não pode exceder 30% do salário ou então o empréstimo será negado.
 '''
 # Solicitei os valores.
-Valor_casa = float(input('Qual o valor da casa que deseja financiar? '))
-Salario = float(input('Qual seu salário? '))
-anos = int(input('Em quantos anos você vai pagar? '))
+Valor_casa = float(input('Qual o valor da casa: R$'))
+Salario = float(input('Qual do comprador: R$ '))
+anos = int(input('Quantos anos de financiamento? '))
 
-# Fiz os calculos de porcetagem.
-parcelas = anos * 12
-prestação = Valor_casa//anos
-porcentagem = (30 / 100) * Salario
+# Fiz os calculos de porcetagem e prestação.
+prestação = Valor_casa / (anos * 12)
+porcentagem = Salario * (30/100)
 
-# Resultados.
-if prestação < porcentagem:
-    print(f'Empréstimo aprovado! Você ira pagar {parcelas} parcelas de R${prestação:.2f}.')
-    print('Parabéns!!')
-elif prestação > porcentagem:
-     print(f'Empréstimo negado. Valor das parcelas é de R$ {parcelas},\n\
-exedendo 30% do seu salário que é de R$ {Salario}.')
-     print('Tente um valor menor na próxima consulta.')
-print('Obrigado por escolher nosso Banco!')
+if prestação <= porcentagem:
+    print(f'Para pagar um casa de R${Valor_casa} em {anos}')
+    print(f'a prestação será de R${prestação:.2f}')
+    print('Empréstimo pode ser CONCEDIDO!')
 
-
+else:
+    print(f'Empréstimo não concedido.')
+ 
 
 
