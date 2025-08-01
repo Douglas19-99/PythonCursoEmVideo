@@ -1,30 +1,52 @@
-import random
-print('---JOKENPÕ---')
+'''
+Crie um programa que faça o computador jogar Jokenpô com você.
+'''
+from random import randint
+from time import sleep
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+print(f'{'JOKENPÔ' :=^40}')
 print('Escolha o que jogar:')
-print('Pedra')
-print('Papel')
-print('Tesoura')
+print('[0]Pedra')
+print('[1]Papel')
+print('[2]Tesoura')
 print('-' * 20)
 
+jogador = int(input('Qual opção você escolhe? '))
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+print('-=' * 11)
+print(f'Computador jogou {(itens[computador])}')
+print(f'jogador jogou {(itens[jogador])}')
+print('-=' * 11)
 
-jogador = str(input('Qual opção você escolhe? ')).lower()
-
-nomes_sorteados = ['Pedra', 'Papel', 'Tesoura']
-computador = random.choice(nomes_sorteados)
-
-
-if jogador not in nomes_sorteados:
-    print('Entrada incorreta, tente novamente.')
-
-elif jogador == computador:
-    print('Empate.')
-
-elif (jogador == 'Papel' and computador == 'Pedra' or\
-jogador == 'tesoura' and computador == 'Papel' or\
-jogador == 'Pedra' and computador == 'Tesoura'):
-    print('PARABÉNS! Você venceu!')
-
-
-else:
-    print('Você perdeu, Tente novamente.')
-
+if  computador == 0:
+    if jogador == 0:
+        print('EMPATE')
+    elif jogador == 1:
+        print('JOGADOR GANHA')
+    elif jogador == 2:
+        print('COMPUTADOR VENCE')
+    else:
+        print('JOGADA INVÁLIDA')
+elif computador == 1:
+    if jogador == 0:
+        print('EMPATE')
+    elif jogador == 1:
+        print('JOGADOR GANHA')
+    elif jogador == 2:
+        print('COMPUTADOR VENCE')
+    else:
+        print('JOGADA INVÁLIDA')
+elif computador == 2:
+    if jogador == 0:
+        print('EMPATE')
+    elif jogador == 1:
+        print('JOGADOR GANHA')
+    elif jogador == 2:
+        print('COMPUTADOR VENCE')
+    else:
+        print('JOGADA INVÁLIDA')

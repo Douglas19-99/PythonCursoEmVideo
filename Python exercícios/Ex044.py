@@ -1,12 +1,23 @@
-print('CALCULADORA DE DESCONTO')
-print('-' * 20)
-print('1 - Dinheiro/Cheque.')
-print('2 - Cartão a vista.')
-print('3 - 2x no Cartão.')
-print('4 - 3x no Cartão.')
-print( )
+'''
+Elabore um programa que calcule o valor a ser pago por um produto,
+considerando o seu preço normal e condição de pagamento:
 
-preco = float(input('Qual o valor do produto? '))
+à vista dinheiro/cheque: 10% de desconto
+
+à vista no cartão: 5% de desconto
+
+em até 2x no cartão: preço formal 
+
+3x ou mais no cartão: 20% de juros
+'''
+print(f'{"CALCULADORA DE DESCONTO":=^40}') # ^ centraliza o texto, = 40 de casa lado.
+print('-' * 20)
+print('[1] - Dinheiro/Cheque.')
+print('[2] - Cartão a vista.')
+print('[3] - 2x no Cartão.')
+print('[4] - 3x no Cartão.')
+# Tentar otmizar esse programa.
+preco = float(input('Qual o valor do produto? R$ '))
 pagamento = int(input('Escolha a forma de pagamento: '))
 
 dc = preco - (preco * 10/100)
